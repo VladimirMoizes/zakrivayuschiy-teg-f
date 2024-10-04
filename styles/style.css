@@ -18,12 +18,27 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font, Arial, sans-serif);
-  font-variation-settings: 'wght' var(--font-weight-main);
+  font-variation-settings: "wght" var(--font-weight-main);
   background-color: var(--background-color);
   color: var(--accent-color);
-  background-image: repeating-linear-gradient(var(--grad-color-second), var(--grad-color-second) 2px, var(--grad-color) 2px, var(--grad-color) 4px),
-  repeating-linear-gradient(-90deg, var(--grad-color-second), var(--grad-color-second) 2px, var(--grad-color) 2px, var(--grad-color) 4px),
-  linear-gradient(var(--grad-color-start), var(--grad-color-start) var(--grad-start), var(--grad-color-end));
+  background-image: repeating-linear-gradient(
+      var(--grad-color-second),
+      var(--grad-color-second) 2px,
+      var(--grad-color) 2px,
+      var(--grad-color) 4px
+    ),
+    repeating-linear-gradient(
+      -90deg,
+      var(--grad-color-second),
+      var(--grad-color-second) 2px,
+      var(--grad-color) 2px,
+      var(--grad-color) 4px
+    ),
+    linear-gradient(
+      var(--grad-color-start),
+      var(--grad-color-start) var(--grad-start),
+      var(--grad-color-end)
+    );
   background-size: cover;
 }
 
@@ -80,7 +95,7 @@
 }
 
 .theme-menu__button:disabled:before {
-  content: '▶';
+  content: "▶";
   color: currentColor;
   inline-size: 14px;
   left: -14px;
@@ -98,21 +113,29 @@
 
 .card__title {
   font-size: 18px;
-  font-variation-settings: 'wght' var(--font-weight-title);
+  font-variation-settings: "wght" var(--font-weight-title);
   line-height: 1.21em;
   margin: 3px 24px 3px 10px;
 }
 
-@media (width <= 375px) {
-  .card__title {
-    margin: 4px 10px 6px;
-  }
+.card__image-container {
+  position: relative;
 }
 
 .card__image {
   inline-size: 100%;
   aspect-ratio: 1/1;
   border: 2px solid var(--accent-color);
+}
+
+.card__label {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  font-size: 14px;
+  line-height: 1em;
+  font-family: "PressStart2P", "Arial";
+  color: var(--accent-color);
 }
 
 .card__text {
@@ -158,10 +181,39 @@
   font-family: "PressStart2P";
 }
 
+.footer {
+  margin: 0 auto;
+  background-color: var(--background-color);
+  padding-block-end: 100px;
+}
 
+.footer__button {
+  margin: 0 auto;
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  display: flex;
+  gap: 8px;
+  padding: 15px 20px;
+  align-items: center;
+}
 
+html .footer__button-diskette {
+  fill: var(--accent-color);
+  inline-size: 21px;
+  block-size: 21px;
+}
 
+@media (width <= 375px) {
+  .card__title {
+    margin: 4px 10px 6px;
+  }
 
+  .footer__button {
+    flex-direction: column;
+  }
 
-
-
+  html .footer__button-diskette {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+}
