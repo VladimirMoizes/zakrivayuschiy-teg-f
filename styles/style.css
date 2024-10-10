@@ -76,13 +76,13 @@
 }
 
 .header__theme-menu {
-  margin-block-end: 25px;
+  margin-block-end: 20px;
 }
 
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
   font-size: 14px;
 }
 
@@ -93,7 +93,6 @@
 }
 
 .theme-menu__button:disabled {
-  /* opacity: 60%; */
   pointer-events: none;
   animation: opacity 0.3s ease forwards;
 }
@@ -166,6 +165,7 @@
 
 .card__image {
   inline-size: 100%;
+  display: block;
   aspect-ratio: 1/1;
   border: 1px solid var(--accent-color);
 }
@@ -173,7 +173,7 @@
 .card__label {
   position: absolute;
   right: 25px;
-  top: 25px;
+  top: 27px;
   font-size: 14px;
   line-height: 1em;
   font-family: "PressStart2P", "Arial";
@@ -197,7 +197,7 @@
 }
 
 .card__text {
-  margin: 25px;
+  margin: 30px 25.5px 20px 25px;
   display: flex;
   flex-direction: column;
   gap: 27px;
@@ -206,14 +206,10 @@
   text-align: left;
 }
 
-/* .card__text-separate:first-of-type {
-  margin-inline-end: 3px;
-} */
-
 .buttons {
-  margin: 0px 25px 25px;
+  margin: 0px 25px 22px;
   display: flex;
-  gap: 12px;
+  gap: 4px;
   justify-content: end;
 }
 
@@ -318,8 +314,10 @@
 .card__like-button {
   background-color: transparent;
   border: 2px solid var(--accent-color);
-  padding: 8px 37px;
+  block-size: 38px;
+  inline-size: 130px;
   position: relative;
+  align-self: center;
 }
 
 .button__text {
@@ -327,6 +325,7 @@
   z-index: 1;
   mix-blend-mode: difference;
   color: var(--text-color);
+  text-align: center;
 }
 
 .button__general::after {
@@ -384,8 +383,6 @@ html .footer__button-diskette {
   z-index: 1;
 }
 
-
-
 .dialog {
   padding: 30px;
   inline-size: 353px;
@@ -400,7 +397,7 @@ html .footer__button-diskette {
 
 .dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
-} 
+}
 
 .svg_and_text {
   display: grid;
@@ -431,7 +428,6 @@ html .footer__button-diskette {
   inline-size: 100%;
   padding: 12.5px 0;
   position: relative;
-
 }
 
 .dialog__button-text {
@@ -450,6 +446,12 @@ html .footer__button-diskette {
   .card__title {
     margin: 4px 10px 6px;
   }
+}
+
+@media (width <= 376px) {
+  .another .card__text-separate:first-child {
+    margin-inline-end: 20px;
+  }
 
   .footer__button {
     flex-direction: column;
@@ -459,4 +461,36 @@ html .footer__button-diskette {
     inline-size: 28px;
     block-size: 28px;
   }
+}
+
+.zero-sprint {
+  filter: brightness(200%);
+}
+
+.start-first-sprint {
+  filter: grayscale(0.8);
+}
+
+.end-first-sprint {
+  filter: brightness(200%);
+}
+
+.start-second-sprint {
+  filter: saturate(158%) opacity(0.6);
+}
+
+.end-second-sprint {
+  filter: invert(0.7);
+}
+
+.start-third-sprint {
+  filter: sepia(80%);
+}
+
+.end-third-sprint {
+  filter: hue-rotate(30deg);
+}
+
+.right-now {
+  filter: blur(3px);
 }
