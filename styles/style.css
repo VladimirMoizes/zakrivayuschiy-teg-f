@@ -384,6 +384,68 @@ html .footer__button-diskette {
   z-index: 1;
 }
 
+
+
+.dialog {
+  padding: 30px;
+  inline-size: 353px;
+  flex-direction: column;
+  background-color: var(--bg-color-main);
+  border: 2px solid var(--accent-color);
+}
+
+.dialog:opened {
+  display: flex;
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+} 
+
+.svg_and_text {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  gap: 30px;
+  margin-block-end: 30px;
+}
+
+.dialog__diskette {
+  inline-size: 39px;
+  block-size: 39px;
+  fill: var(--text-color);
+  mix-blend-mode: difference;
+}
+
+.dialog__text {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.dialog__button {
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  inline-size: 100%;
+  padding: 12.5px 0;
+  position: relative;
+
+}
+
+.dialog__button-text {
+  font-size: 14px;
+  line-height: 0.9em;
+  font-family: var(--accent-font, Arial, sans-serif);
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  color: var(--text-color);
+}
+
 @media (width <= 375px) {
   .card__title {
     margin: 4px 10px 6px;
