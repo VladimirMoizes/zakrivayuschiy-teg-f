@@ -8,6 +8,7 @@
 
 :root.theme-light {
     --background-color: #fff;
+    --bg-color-main: #fff;
     --accent-color: #000;
     --font-weight-main: 400;
     --font-weight-title: 700;
@@ -16,11 +17,15 @@
     --grad-color-start: #e7e7e7;
     --grad-color-end: #1a1a1a;
     --grad-start: 0.01vh;
+    --stroke-color: #fff;
+    --text-color: #fff;
+    --heart-contour-color: #000;
 }
 
 @media (prefers-color-scheme: light) {
     :root {
     --background-color: #fff;
+    --bg-color-main: #fff;
     --accent-color: #000;
     --font-weight-main: 400;
     --font-weight-title: 700;
@@ -29,31 +34,42 @@
     --grad-color-start: #e7e7e7;
     --grad-color-end: #1a1a1a;
     --grad-start: 0.01vh;
+    --stroke-color: #fff;
+    --text-color: #fff;
+    --heart-contour-color: #000;
     }
 }
 
 :root.theme-dark {
-    --background-color: #000;
+    --background-color: #007F0C;
+    --bg-color-main: #000;
     --accent-color: #00CC14;
     --font-weight-main: 465;
     --font-weight-title: 785;
-    --grad-color: transparent;
-    --grad-color-second: #007F0C;
+    --grad-color: #000;
+    --grad-color-second: transparent;
     --grad-color-start: #007f0c;
     --grad-color-end:  #004306;
     --grad-start: 0;
+    --stroke-color: #000;
+    --text-color: #00CC14;
+    --heart-contour-color: #00CC14;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background-color: #000;
+        --background-color: #007F0C;
+        --bg-color-main: #000;
         --accent-color: #00CC14;
         --font-weight-main: 465;
         --font-weight-title: 785;
-        --grad-color: transparent;
-        --grad-color-second: #007F0C;
+        --grad-color: #000;
+        --grad-color-second: transparent;
         --grad-color-start: #007f0c;
         --grad-color-end:  #004306;
         --grad-start: 0;
+        --stroke-color: #000;
+        --text-color: #00CC14;
+        --heart-contour-color: #00CC14;
     }
 }
